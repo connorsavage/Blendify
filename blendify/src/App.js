@@ -7,6 +7,12 @@ import './App.css';
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [accessToken, setAccessToken] = useState(null);
+
+  const handleLogout = () => {
+    setAccessToken(null);
+  }  
+
 
   return (
     <Router>
@@ -16,8 +22,12 @@ function App() {
         </header>
         
         <Routes>
-          <Route path="/signin" element={isAuthenticated ? <Navigate to="/" /> : <SignInView onSignIn={() => setIsAuthenticated(true)} />} />
-          <Route path="/" element={isAuthenticated ? <HomeView /> : <Navigate to="/signin" />} />
+          <Route path="/signin" 
+                  element={isAuthenticated ? <Navigate to="/home" /> : <SignInView onSignIn={() => setIsAuthenticated(true)} />}
+                />
+          <Route path="/"
+                  element={isAuthenticated ? <HomeView onLogout={handleLogout} /> : <Navigate to="/signin" />}
+                />
         </Routes>
       </div>
     </Router>

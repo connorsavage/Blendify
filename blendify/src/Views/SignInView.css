@@ -11,17 +11,17 @@
 }
 
 
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #121212;
-    background-image: 
-                      linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, .3)), /* Black overlay gradient */
-                      linear-gradient(120deg, rgba(57, 255, 20, 0.05), rgba(57, 255, 20, 0.2), rgba(57, 255, 20, 0.05)), 
-                      repeating-radial-gradient(circle at 1em 1em, rgba(57, 255, 20, 0.03), rgba(57, 255, 20, 0.03) 5px, transparent 5px, transparent 10px);
-    background-size: 300% 300%;
-    animation: gradientBG 6s ease infinite;
-    color: #f4f5f7;
-}
+/* body { */
+    /* font-family: 'Arial', sans-serif; */
+    /* background-color: #121212; */
+    /* background-image:  */
+                      /* linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, .3)), Black overlay gradient */
+                      /* linear-gradient(120deg, rgba(57, 255, 20, 0.05), rgba(57, 255, 20, 0.2), rgba(57, 255, 20, 0.05)),  */
+                      /* repeating-radial-gradient(circle at 1em 1em, rgba(57, 255, 20, 0.03), rgba(57, 255, 20, 0.03) 5px, transparent 5px, transparent 10px); */
+    /* background-size: 300% 300%; */
+    /* animation: gradientBG 6s ease infinite; */
+    /* color: #f4f5f7; */
+/* } */
 
 .signin-view {
     display: flex;
