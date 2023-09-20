@@ -1,22 +1,19 @@
 import React, { useState } from 'react';
 import './SignInView.css';
 
-export function SignInView({ onSignIn }) { // <-- Notice the prop added here
+export function SignInView({ onSignIn }) {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Implement your sign-in logic here
-        // For now, just log the email and password
         console.log("Email:", email, "Password:", password);
-        
-        // Signal that the user has "signed in"
-        onSignIn(); // <-- Call the prop function here
+        onSignIn();
     }
 
     return (
         <div className="signin-view">
+            <h1 className="app-name">Blendify</h1> {/* Added app name */}
             <form onSubmit={handleSubmit}>
                 <input 
                     type="email" 
