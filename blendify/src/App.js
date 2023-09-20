@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import { useEffect, useState } from "react";
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import { HomeView } from './Views/HomeView';
-import { SignInView } from './Views/SignInView'; // Corrected import here.
+import { SignInView } from './Views/SignInView/SignInView'; // Corrected import here.
 import './App.css';
 
 function App() {

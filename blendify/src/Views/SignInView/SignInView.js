@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './SignInView.css';
+import spotifyLogo from './spotifyLogo.png';
 
 export function SignInView({ onSignIn }) {
     const [email, setEmail] = useState('');
@@ -13,7 +14,11 @@ export function SignInView({ onSignIn }) {
 
     return (
         <div className="signin-view">
-            <h1 className="app-name">Blendify</h1> {/* Added app name */}
+            <h1 className="app-name">Blendify</h1> {/* This remains unchanged */}
+            <div className="spotify-login-text">
+                <img src={spotifyLogo} alt="Spotify Logo" className="spotify-logo"/>
+                <span>Login to Spotify</span>
+            </div>
             <form onSubmit={handleSubmit}>
                 <input 
                     type="email" 
