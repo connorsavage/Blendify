@@ -14,13 +14,15 @@ export function SignInView({ onSignIn }) {
     };
 
     return (
-        <div className="signin-view">
-            <h1 className="app-name">Blendify</h1>
-            <div className="spotify-login-text">
-                <img src={spotifyLogo} alt="Spotify Logo" className="spotify-logo"/>
-                <span>Powered by Spotify</span>
+        <div className="signin-view-wrapper">
+            <div className="signin-view">
+                <h1 className="app-name">Blendify</h1>
+                <div className="spotify-login-text">
+                    <img src={spotifyLogo} alt="Spotify Logo" className="spotify-logo"/>
+                    <span>Powered by Spotify</span>
+                </div>
+                <button onClick={onSignInWithSpotify}>Sign In</button>
             </div>
-            <button onClick={onSignInWithSpotify}>Sign In</button>
         </div>
     );
 }

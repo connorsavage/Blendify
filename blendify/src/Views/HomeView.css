@@ -1,3 +1,7 @@
 header {
     z-index: 1;
 }
+
+.home-view-wrapper {
+    background-color: black;
+}
