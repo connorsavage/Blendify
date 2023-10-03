@@ -15,13 +15,8 @@
 
 header {
   display: flex;
-  justify-content: space-between;
-  background: rgb(2, 0, 36);
-  background: linear-gradient(
-    90deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgb(108, 152, 255) 100%
-  );
+  justify-content: center;
+  background: rgb(0, 0, 0);
   text-align: center;
   margin: 0;
   transition: opacity 5s;
