@@ -1,13 +1,22 @@
-export function HomeView({onLogout}) {
-    //console.log(props)
+import React from 'react';
+import SearchBar from './SearchBar'; // Make sure the path is correct
+
+export function HomeView({ onLogout }) {
+    
+    const handleSearch = (searchTerm) => {
+        console.log("Searching for:", searchTerm);
+        // Implement your search logic here
+    };
+
     return (
         <div>
             <h2>Home View!</h2>
             <header>
                 <nav>
-                    <button> onClick={onLogout}Log Out</button>
+                    <button onClick={onLogout}>Log Out</button>
                 </nav>
             </header>
+            <SearchBar onSearch={handleSearch} />
         </div>
     );
 }

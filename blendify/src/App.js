@@ -30,6 +30,9 @@ function App() {
           <Route path="/"
                   element={isAuthenticated ? <HomeView onLogout={handleLogout} /> : <Navigate to="/signin" />}
                 />
+          <Route path="/home"
+                  element={<HomeView onLogout={handleLogout} /> }
+                />
         </Routes>
       </div>
     </Router>
@@ -40,7 +43,7 @@ export default App;
 
 
 // Access Token (Bearer):
-// BQAymk9Vq7utK6SICB9AYWxd1cULLmfLprbSytE1vb4a8wo_uRPhZe3DJ6aIqffnX7hF0AsH-HXYiOJtT3Sx_ia1XcTbvSAvR7csv0Ef_7-qyPXeTKM
+// BQB2oWW6x_SJrg72mLVImQKWziO4AVaVzinlFTSbICB86Gv9i0Yi8p9joqxVqlC6SFpxhm3fi-iX80sJUoIB-l1UWFWUlaVNbuPhigYx54u--5ygpps
 
 // curl command to generate new acces token:
 // curl -X POST "https://accounts.spotify.com/api/token" \
