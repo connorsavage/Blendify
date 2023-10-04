@@ -2,9 +2,10 @@ import logo from './logo.svg';
 //import { useEffect, useState } from "react";
 import { useState } from "react";
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
-import { HomeView } from './Views/HomeView';
+import { HomeView } from './Views/HomeView/HomeView';
 import { SignInView } from './Views/SignInView/SignInView'; // Corrected import here.
 import './App.css';
+import ResultsPage from './Views/Results/ResultsPage';
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -33,6 +34,9 @@ function App() {
           <Route path="/home"
                   element={<HomeView onLogout={handleLogout} /> }
                 />
+          <Route path="/search/:query" 
+                  component={ResultsPage}
+                />      
         </Routes>
       </div>
     </Router>
