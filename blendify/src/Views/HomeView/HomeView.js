@@ -17,8 +17,7 @@ export function HomeView({ onLogout, processSignIn }) {
 
   return (
     <div className="home-view-wrapper">
-      <div>
-        <h2>Home View!</h2>
+      <div className="home-view">
         <header>
           <nav>
             <button
@@ -31,6 +30,7 @@ export function HomeView({ onLogout, processSignIn }) {
             </button>
           </nav>
         </header>
+        <div className="search-text">Find Your Blend</div>
         <SearchBar onSearch={handleSearch} />
       </div>
     </div>

@@ -5,6 +5,8 @@ import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-d
 import { HomeView } from "./Views/HomeView/HomeView"
 import { SignInView } from "./Views/SignInView/SignInView" // Corrected import here.
 import "./App.css"
+import ResultsPage from "./Views/Results/ResultsPage"
+
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false)
   const [accessToken, setAccessToken] = useState(null)
@@ -45,6 +47,7 @@ function App() {
               />
             }
           />
+          <Route path="/search/:query" component={ResultsPage} />
         </Routes>
       </div>
     </Router>
