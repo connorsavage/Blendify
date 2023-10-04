@@ -1,6 +1,6 @@
 import React from 'react';
 import './HomeView.css';
-import SearchBar from './SearchBar'; // Make sure the path is correct
+import SearchBar from '../../Components/SearchBar/SearchBar'; // Make sure the path is correct
 
 export function HomeView({ onLogout }) {
     
