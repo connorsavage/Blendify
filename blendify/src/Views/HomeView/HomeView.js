@@ -11,14 +11,16 @@ export function HomeView({ onLogout }) {
 
     return (
         <div className="home-view-wrapper">
-            <div>
-                <h2>Home View!</h2>
-                <header>
-                    <nav>
-                        <button onClick={onLogout}>Log Out</button>
-                    </nav>
-                </header>
-                <SearchBar onSearch={handleSearch} />
+            <div className="home-view">
+            <header>
+                <nav>
+                    <button onClick={onLogout}>Log Out</button>
+                </nav>
+            </header>
+            <div className="search-text">
+                Find Your Blend
+            </div>
+            <SearchBar onSearch={handleSearch} />
             </div>
         </div>
     );
