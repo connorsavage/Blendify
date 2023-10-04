@@ -5,23 +5,18 @@ import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-d
 import { HomeView } from "./Views/HomeView/HomeView"
 import { SignInView } from "./Views/SignInView/SignInView" // Corrected import here.
 import "./App.css"
-import ResultsPage from "./Views/Results/ResultsPage"
-
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false)
   const [accessToken, setAccessToken] = useState(null)
   //const [setAccessToken] = useState(null)
-
   const handleLogout = () => {
     setAccessToken(null)
     setIsAuthenticated(false)
   }
-
   return (
     <Router>
       <div className="App" id="App">
         <header>Welcome to Blendify</header>
-
         <Routes>
           <Route
             path="/signin"
@@ -36,20 +31,25 @@ function App() {
           <Route
             path="/"
             element={
-              isAuthenticated ? (
-                <HomeView onLogout={handleLogout} />
-              ) : (
-                <Navigate to="/signin" />
-              )
+              isAuthenticated ? <Navigate to="/home" /> : <Navigate to="/signin" />
             }
           />
-          <Route path="/home" element={<HomeView onLogout={handleLogout} />} />
+          <Route
+            path="/home"
+            element={
+              <HomeView
+                onLogout={handleLogout}
+                processSignIn={() => {
+                  setIsAuthenticated(true)
+                }}
+              />
+            }
+          />
         </Routes>
       </div>
     </Router>
   )
 }
-
 export default App
 
 // Access Token (Bearer):
