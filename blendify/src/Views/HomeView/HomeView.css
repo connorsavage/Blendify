@@ -1,11 +1,5 @@
 header {
-    width: 100%;
-    z-index: 1;
     background-color: #242424; /* Add a background color for visibility across the full width */
-    padding: 10px 0; /* Add some vertical padding to give space to your header content */
-    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2); /* Optional: Adds a subtle shadow for a slightly lifted appearance */
-    position: fixed; /* Optional: Fix the header at the top of the page */
-    top: 0; /* Optional: Ensure it's at the top */
 }
 .home-view-wrapper {
     background-color: #343434;
@@ -23,4 +17,41 @@ header {
     height: 100vh;
     position: relative;
     padding-top: 60px; /* Add a top padding equal to your header's height to prevent content hiding behind it */
+}
+
+.sidenav {
+    width: 150px;
+    background: #242424;
+    position: absolute;
+    height: 95vh;
+    padding: 0 30px;
+    left: -100%;
+    transition: all 1s;
+}
+
+.sidenav.active {
+    left: 0;
+}
+
+ul {
+    padding: 0;
+}
+
+ul li {
+    list-style-type: none;
+    margin: 10px 0;
+}
+
+ul li a {
+    color: rgba(255, 255, 255, 1);
+    text-decoration: none;
+    font-size: 16px;
+    display: block;
+    padding: 10px 15px;
+    border-radius: 6px;
+}
+
+ul li a:hover,
+ul li a.active {
+    background: #727272;
 }
