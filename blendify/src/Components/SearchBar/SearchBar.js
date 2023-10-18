@@ -4,14 +4,8 @@ import Info from "../Info"
 
 const SearchBar = ({ onSearch }) => {
   const [searchTerm, setSearchTerm] = useState("")
-  const [searchResults, setSearchResults] = useState([])
-  const [data, setData] = useState("")
-  const [loading, setLoading] = useState(false)
-  const [error, setError] = useState(null)
 
   const baseUrl = "https://api.spotify.com/v1"
-  //const token = "BQCC1dphvrPli2wJ1wDQV8uOT3Iuf5ExzUoPRt7xIiQzFsrBnZU1_8u6MIKK8_fYcLCzYSmJIyMh3xL3tdcHuE7zxa7cTQ3Z8ewx1smeNBPbM86RkoA"
-  // const token = "BQBRDZw3ez4njbowbl-aGObMeQFAIQ5r800YrqRwEbMPS77LCagFIgqy4wHxZwtuuWlpjzjalzdYjnMtQIln0YrdoXDNJuSd_OaOQTYJr7wsupzr-KiFsjqvxWqA7M98ySrP-us5en9Pt2D6uG3F37q75UYBfTbtxY79Gl-11RoJeD1c6xSowrJ6VfCoWs0kUg"
 
   // search - q and type required
   // q filters: artist, track, year, upc, tag:hipster, tag:new, isrc, genre
@@ -52,23 +46,17 @@ const SearchBar = ({ onSearch }) => {
       if (!response.ok) {
         throw new Error("Could not retrieve data")
       }
-      setLoading(false)
       const data = await response.json()
       onSearch(data)
-      setData(data.tracks.items[0].album.name)
       console.log("HERE'S SEARCH TERM!!!: " + searchTerm)
       console.log(
         "HERE'S THE MOST RECENT ALBUM NAME!!!: " + data.tracks.items[0].album.name
       )
-      setSearchResults(data.tracks.items.name)
 
       //history.push(`/search/${encodeURIComponent(searchTerm)}&type=track}`);
     } catch (error) {
       console.error("Error during API request: ", error)
-      setError(error)
     }
-    console.log("bruh")
-    setData(null)
   }
 
   // const handleSubmit = (event) => {
