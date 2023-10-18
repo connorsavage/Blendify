@@ -32,6 +32,23 @@ const SearchBar = ({ onSearch }) => {
   // tag:hipster - albums with lowest 10% popularity
   // type filters: album, artist, playlist, track, show, episode, audiobook
 
+  const clientId = "7853b4c9dc604b2ea9b7f1cc305d1e86"
+  const clientSecret = "cad3689f3ed5446596b7105deed6497f"
+
+  const _getToken = async () => {
+    const result = await fetch("https://accounts.spotify.com/api/token", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded",
+        Authorization: "Basic " + btoa(clientId + ":" + clientSecret),
+      },
+      body: "grant_type=client_credentials",
+    })
+    const data = await result.json()
+    console.log("NEW TOKEN THAT WORKS!!!: " + data.access_token)
+    return data.access_token
+  }
+
   const handleChange = (event) => {
     setSearchTerm(event.target.value)
   }
@@ -61,6 +78,8 @@ const SearchBar = ({ onSearch }) => {
         "HERE'S THE MOST RECENT ALBUM NAME!!!: " + data.tracks.items[0].album.name
       )
       setSearchResults(data.tracks.items.name)
+
+      //history.push(`/search/${encodeURIComponent(searchTerm)}&type=track}`);
     } catch (error) {
       console.error("Error during API request: ", error)
     }
