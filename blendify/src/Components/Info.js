@@ -1,12 +1,12 @@
-export default function Info({ name, data }) {
-  return !data ? (
+export default function Info({ searchId, musicData }) {
+  return !musicData ? (
     <p></p>
-  ) : !data?.data[0] ? (
-    <p>No data for {name}</p>
+  ) : !musicData ? (
+    <p>No data for {searchId}</p>
   ) : (
     <div>
-      <h2 className="searchTitle"> {name}</h2>
-      <p className="searchAlbumName">{data.tracks.items[0].album.name}</p>
+      <h2 className="searchTitle"> {searchId}</h2>
+      <p className="searchAlbumName">{musicData.tracks.items[0].album.name}</p>
     </div>
   )
 }
