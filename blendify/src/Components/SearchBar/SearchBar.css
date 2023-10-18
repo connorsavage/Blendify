@@ -2,7 +2,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 500px;
   border-radius: 25px; /* Add this for the outer container */
   overflow: hidden; /* Ensures internal components adhere to border-radius */
   width: fit-content; /* Adjusts the width according to content */
@@ -18,7 +17,12 @@
   border-top-left-radius: 25px; /* Rounded corner */
   border-bottom-left-radius: 25px; /* Rounded corner */
   outline: none; /* Remove focus border */
-  background-color: rgba(255, 255, 255, 0.1); /* Add this line for a slight white, transparent background */
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.1
+  ); /* Add this line for a slight white, transparent background */
   color: #fff;
   transition: background-color 0.3s ease-in-out;
 }
@@ -26,7 +30,7 @@
 .search-bar button {
   padding: 10px 20px;
   font-size: 20px;
-  background-color: #976EF8;
+  background-color: #976ef8;
   color: #fff;
   border: none;
   cursor: pointer;
@@ -44,5 +48,3 @@
   /*background-color: #8151DB;*/
   background-color: rgba(255, 255, 255, 0.2);
 }
-
-  

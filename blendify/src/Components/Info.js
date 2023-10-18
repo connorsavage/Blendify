@@ -1,3 +1,5 @@
+import "./Info.css"
+
 export default function Info({ searchId, musicData }) {
   return !musicData ? (
     <p></p>

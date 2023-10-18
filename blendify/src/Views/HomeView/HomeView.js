@@ -56,7 +56,7 @@ export function HomeView({ onLogout, processSignIn }) {
         {error ? (
           <span>Sorry there was an error</span>
         ) : (
-          <Info searchId={searchId} musicData={musicData} />
+          <Info id="info1" searchId={searchId} musicData={musicData} />
         )}
       </div>
     </div>
