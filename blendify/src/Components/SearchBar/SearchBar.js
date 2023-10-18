@@ -22,7 +22,7 @@ const SearchBar = ({ onSearch }) => {
     })
 
     const data = await result.json()
-    console.log("NEW TOKEN THAT WORKS!!!: " + data.access_token)
+    //console.log("NEW TOKEN!!!: " + data.access_token)
     return data.access_token
   }
 
@@ -56,7 +56,10 @@ const SearchBar = ({ onSearch }) => {
 
       const data = await response.json()
       // onSearch(data);
-      console.log("HERE'S THE DATA!!!: " + data.tracks.items[0].album.name)
+      console.log("HERE'S SEARCH TERM!!!: " + searchTerm)
+      console.log(
+        "HERE'S THE MOST RECENT ALBUM NAME!!!: " + data.tracks.items[0].album.name
+      )
       setSearchResults(data.tracks.items.name)
     } catch (error) {
       console.error("Error during API request: ", error)
