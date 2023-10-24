@@ -1,0 +1,52 @@
+.search-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px; /* Add this for the outer container */
+  /* overflow: hidden; Ensures internal components adhere to border-radius */
+  width: fit-content; /* Adjusts the width according to content */
+  /*background-color: #976EF8; /* A background to match with the button */
+}
+
+.search-bar input {
+  padding: 10px;
+  font-size: 15px;
+  border: none;
+  margin-right: 10px;
+  width: 300px;
+  border-top-left-radius: 25px; /* Rounded corner */
+  border-bottom-left-radius: 25px; /* Rounded corner */
+  outline: none; /* Remove focus border */
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.1
+  ); /* Add this line for a slight white, transparent background */
+  color: #fff;
+  transition: background-color 0.3s ease-in-out;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.search-bar button {
+  padding: 10px 20px;
+  font-size: 15px;
+  background-color: #976ef8;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-top-right-radius: 25px; /* Rounded corner */
+  border-bottom-right-radius: 25px; /* Rounded corner */
+  transition: background-color 0.3s ease-in-out; /* Smooth transition */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.search-bar button:hover {
+  /*background-color: #8151DB;*/
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.search-bar input:hover {
+  /*background-color: #8151DB;*/
+  background-color: rgba(255, 255, 255, 0.2);
+}
