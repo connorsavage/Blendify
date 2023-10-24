@@ -3,7 +3,7 @@
   justify-content: center;
   align-items: center;
   border-radius: 25px; /* Add this for the outer container */
-  overflow: hidden; /* Ensures internal components adhere to border-radius */
+  /* overflow: hidden; Ensures internal components adhere to border-radius */
   width: fit-content; /* Adjusts the width according to content */
   /*background-color: #976EF8; /* A background to match with the button */
 }

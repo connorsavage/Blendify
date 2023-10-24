@@ -30,6 +30,8 @@ const getMusicInfo = async (idOrName) => {
     throw new Error("Could not retrieve data")
   }
   const json = await response.json()
+  console.log("JSON: " + json.stringify)
+
   return json
 }
 export { getMusicInfo }

@@ -2,6 +2,23 @@
   text-align: center;
 }
 
-.searchAlbum Name {
+.searchAlbumName {
   text-align: center;
+}
+
+.searchAlbumInfo {
+  text-align: center;
+  color: white;
+  border: 1px solid white;
+  border-radius: 8px;
+  padding: 5px;
+}
+
+.album-name {
+  color: #976ef8;
+  font-weight: bold;
+}
+
+.artist-name {
+  color: white;
 }

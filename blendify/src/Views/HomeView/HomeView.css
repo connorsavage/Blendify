@@ -20,9 +20,14 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  height: 100%;
   position: relative;
-  padding: 60px; /* Add a top padding equal to your header's height to prevent content hiding behind it */
+}
+
+.spacer
+{
+  width: 100%;
+  height: 95px;
 }
 
 #info1 {

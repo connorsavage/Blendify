@@ -50,6 +50,9 @@ export function HomeView({ onLogout, processSignIn }) {
             </button>
           </nav>
         </header>
+        <div class="spacer">
+          &nbsp;
+        </div>
         <div className="search-text">Find Your Blend</div>
         <SearchBar search={setSearchId} />
         {loading && <p>loading...</p>}
