@@ -1,0 +1,19 @@
+{
+  "name": "blendify",
+  "version": "1.0.0",
+  "description": "Prerequisite: Install Node.js\r node --version\r npm --version",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/connorsavage/Blendify.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/connorsavage/Blendify/issues"
+  },
+  "homepage": "https://github.com/connorsavage/Blendify#readme"
+}
