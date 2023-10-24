@@ -45,6 +45,7 @@ export function HomeView({ onLogout, processSignIn }) {
                 onLogout()
                 navigate("/signin")
               }}
+              className="logout-button"
             >
               Log Out
             </button>

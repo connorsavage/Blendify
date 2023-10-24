@@ -7,7 +7,7 @@ export default function Info({ searchId, musicData }) {
     <p>No data for {searchId}</p>
   ) : (
     <div>
-      <h2 className="searchTitle">Showing results for: {searchId}</h2>
+      <h2 className="searchTitle">Showing Results For: <br></br> {searchId}</h2>
       {/* <p className="searchAlbumName">{musicData.tracks.items[0].album.name}</p> */}
       <div className="searchAlbumName">
         {musicData.tracks.items.map((item) => (

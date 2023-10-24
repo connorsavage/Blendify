@@ -10,7 +10,7 @@
 
 .search-bar input {
   padding: 10px;
-  font-size: 20px;
+  font-size: 15px;
   border: none;
   margin-right: 10px;
   width: 300px;
@@ -25,11 +25,12 @@
   ); /* Add this line for a slight white, transparent background */
   color: #fff;
   transition: background-color 0.3s ease-in-out;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .search-bar button {
   padding: 10px 20px;
-  font-size: 20px;
+  font-size: 15px;
   background-color: #976ef8;
   color: #fff;
   border: none;
@@ -37,6 +38,7 @@
   border-top-right-radius: 25px; /* Rounded corner */
   border-bottom-right-radius: 25px; /* Rounded corner */
   transition: background-color 0.3s ease-in-out; /* Smooth transition */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .search-bar button:hover {
