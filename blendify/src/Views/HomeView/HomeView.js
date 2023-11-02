@@ -56,9 +56,7 @@ export function HomeView({ onLogout, processSignIn }) {
           </button>
         </nav>
       </header>
-        <div class="spacer">
-          &nbsp;
-        </div>
+
       <Navbar show={showNav} />
       <div className="home-view">
         <div className="search-text">Find Your Blend</div>
