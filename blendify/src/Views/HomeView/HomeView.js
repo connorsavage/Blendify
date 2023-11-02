@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react"
 import "./HomeView.css"
 import { useNavigate } from "react-router-dom"
-import SearchBar from "../../SearchBar/SearchBar" // Make sure the path is correct
+import SearchBar from "../../Components/SearchBar/SearchBar" // Make sure the path is correct
 import Navbar from "../../Components/Navbar"
 import {GiHamburgerMenu} from 'react-icons/gi'
 
