@@ -1,10 +1,11 @@
 # Blendify
-Prerequisite: Install Node.js
-node --version
-npm --version
 
-cd into blendify folder
+-  Prerequisite: Install Node.js
+-  node --version
+-  npm --version
 
-npm install
-npm init
-npm start
+-  cd into blendify folder
+  
+-  $npm install
+-  $npm init
+-  $npm start

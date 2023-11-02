@@ -1,22 +1,60 @@
 header {
-    background-color: #242424; /* Add a background color for visibility across the full width */
+  width: 100%;
+  background-color: #242424; /* Add a background color for visibility across the full width */
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2); /* Optional: Adds a subtle shadow for a slightly lifted appearance */
+  position: fixed; /* Optional: Fix the header at the top of the page */
+  top: 0; /* Optional: Ensure it's at the top */
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2);
+}
+body {
+  cursor: default;
+}
+/* Change the cursor to pointer (hand) when hovering over buttons */
+button:hover {
+  cursor: pointer;
 }
 .home-view-wrapper {
-    background-color: #343434;
+  background: linear-gradient(to bottom, #343434, #000000);
+  height: 100%;
 }
 .search-text {
-    font-size: 32px; /* Adjust to desired size */
-    color: rgba(255, 255, 255, 1); /* White with 80% opacity */
-    margin-bottom: 15px;
+  font-size: 32px; /* Adjust to desired size */
+  color: rgba(255, 255, 255, 1); /* White with 80% opacity */
+  margin-bottom: 15px;
 }
 .home-view {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    position: relative;
-    padding-top: 60px; /* Add a top padding equal to your header's height to prevent content hiding behind it */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+  position: relative;
+}
+
+.spacer
+{
+  width: 100%;
+  height: 95px;
+}
+
+#info1 {
+}
+
+/* styles.css */
+.logout-button {
+  background: #8151DB;
+  color: white;
+  padding: 7px 15px; /* Adjust the padding to make the space smaller */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease-in-out;
+}
+
+.logout-button:hover {
+  background: #6A3DBD;
+  /* You can add additional hover effects here */
 }
 
 .sidenav {
