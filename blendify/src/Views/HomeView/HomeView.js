@@ -4,8 +4,13 @@ import { useNavigate } from "react-router-dom"
 import { getMusicInfo } from "../../Api.js"
 import Info from "../../Components/Info.js"
 import SearchBar from "../../Components/SearchBar/SearchBar"
+import Navbar from "../../Components/Navbar"
+import {GiHamburgerMenu} from 'react-icons/gi'
 
 export function HomeView({ onLogout, processSignIn }) {
+  const [ showNav, setShowNav ] = useState(false)
+
+
   const [searchId, setSearchId] = useState("")
   const [musicData, setMusicData] = useState("")
   const [loading, setLoading] = useState(false)
@@ -37,23 +42,23 @@ export function HomeView({ onLogout, processSignIn }) {
 
   return (
     <div className="home-view-wrapper">
-      <div className="home-view">
-        <header>
-          <nav>
-            <button
-              onClick={() => {
-                onLogout()
-                navigate("/signin")
-              }}
+      <header>
+        <GiHamburgerMenu onClick={() => setShowNav(!showNav)}/>
+        <nav>
+          <button
+            onClick={() => {
+              onLogout()
+              navigate("/signin")
+            }}
               className="logout-button"
-            >
-              Log Out
-            </button>
-          </nav>
-        </header>
-        <div class="spacer">
-          &nbsp;
-        </div>
+          >
+            Log Out
+          </button>
+        </nav>
+      </header>
+
+      <Navbar show={showNav} />
+      <div className="home-view">
         <div className="search-text">Find Your Blend</div>
         <SearchBar search={setSearchId} />
         {loading && <p>loading...</p>}

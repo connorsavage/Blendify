@@ -18,7 +18,6 @@ function App() {
   return (
     <Router>
       <div className="App" id="App">
-        <header>Welcome to Blendify</header>
         <Routes>
           <Route
             path="/signin"
