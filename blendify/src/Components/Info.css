@@ -8,31 +8,37 @@
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5); /* Text shadow */
 }
 
-.searchAlbumName {
+.searchSongmName {
   text-align: center;
 }
 
-.searchAlbumInfo {
+.searchSongInfo {
   text-align: center;
   color: white;
-  background: #161616; /* Light gray background */
+  background: #161616;
   border: 1px solid white;
   border-radius: 8px;
-  padding: 5px;
+  padding: 7px 80px; /* Increased horizontal padding */
+  margin: 8px; /* Adjust the margin between buttons */
+  font-size: 15px; /* Slightly smaller font size */
   transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-.searchAlbumInfo:hover {
+.searchSongInfo:hover {
   background-color: rgba(255, 255, 255, 0.1);
-  transform: scale(1.02); /* Increase size by 5% on hover */
+  transform: scale(1.02);
 }
 
-.album-name {
+.song-name {
   color: #976ef8;
   font-weight: bold;
 }
 
 .artist-name {
+  color: white;
+}
+
+.titletext {
   color: white;
 }
