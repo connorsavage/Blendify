@@ -32,6 +32,31 @@ const getMusicInfo = async (idOrName) => {
   const json = await response.json()
   console.log("JSON: " + json.stringify)
 
+  const tracks = json.tracks?.items || [];
+
+  // Fetch BPM for each track and add it to the response
+  const tracksWithBpm = await Promise.all(
+    tracks.map(async (track) => {
+      const audioFeaturesResponse = await fetch(`${baseUrl}/audio-features/${track.id}`, {
+        method: "GET",
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
+      if (!audioFeaturesResponse.ok) {
+        throw new Error("Could not retrieve audio features");
+      }
+      const audioFeaturesJson = await audioFeaturesResponse.json();
+      return {
+        ...track,
+        bpm: audioFeaturesJson.tempo,
+      };
+    })
+  );
+
+
+
+
   return json
 }
 export { getMusicInfo }
