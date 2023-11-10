@@ -57,7 +57,8 @@ export default function Info({ searchId, musicData }) {
     window.open(searchURL, '_blank');
   }
 
-  const handleSongClick = async (song) => {
+  const handleSongClick = async (song, event) => {
+    event.stopPropagation();
     setSelectedSong(song);
     console.log("song", song);
     if (song.bpm) {
@@ -120,26 +121,36 @@ export default function Info({ searchId, musicData }) {
         !musicData ? (
           <p>No data for {searchId}</p>
         ) : (
-          <div>
-            <h2 className="searchTitle">Showing Results For: {searchId}</h2>
-            <div className="searchSongName">
-              {musicData.map((item) => (
-                <div key={item.id}>
-                  <button className="searchSongInfo" onClick={() => handleSongClick(item)}>
-                    <span className="song-name">{item.name}</span> by{" "}
-                    <span className="artist-name">{item.artists.map((artist) => artist.name).join(", ")}</span>
-                  </button>
+          
+          <ul >
+          {musicData.map((item) => (
+            <li className="recommendations-list" key={item.id} onClick={(event) => handleSongClick(item, event)} >
+              <div>
+                <img 
+                    className="cover-art"
+                    src={item.album.images[0].url} 
+                    alt="Track Cover" 
+                  />
+              </div>
+               <div className="text-container">
+                    <div>
+                        <span className="song-name">{item.name}</span>
+                      </div>
+                      <div>
+                        <span className="artist-name">{item.artists.map((artist) => artist.name).join(", ")}</span>
+                      </div>
                 </div>
-              ))}
-            </div>
-          </div>
+
+            </li>
+          ))}
+        </ul>
         )
       ) : (
         <div>
           <button className="back-button" onClick={goBack}>Back</button>
           <div>
             <p classname="selected-song">
-              <span className="song-name">{selectedSong.name}</span> -{" "}
+              <span className="song-name">{selectedSong.name}</span> {" "}
               <span className="artist-name">{selectedSong.artists.map((artist) => artist.name).join(", ")}</span>
             </p> 
           </div>
@@ -150,12 +161,23 @@ export default function Info({ searchId, musicData }) {
               <h3 className="song-recommendations">Song Recommendations for BPM: {Math.round(currentBpm)}</h3>
               <ul >
                 {songRecs.tracks.map((rec) => (
-                  <li className="recommendations-list" key={rec.id} >
+                  <li className="recommendations-list" key={rec.id} onClick={(event) => handleSongClick(rec, event)}>
+                    <div>
+                      <img 
+                          className="cover-art"
+                          src={rec.album.images[0].url} 
+                          alt="Track Cover" 
+                        />
+                    </div>
                      <div className="text-container">
-                        <span className="song-name">{rec.name}</span> by{" "}
-                        <span className="artist-name">{rec.artists.map((artist) => artist.name).join(", ")}</span>
-
+                          <div>
+                              <span className="song-name">{rec.name}</span>
+                            </div>
+                            <div>
+                              <span className="artist-name">{rec.artists.map((artist) => artist.name).join(", ")}</span>
+                            </div>
                       </div>
+                      
                       <div className="button-container">
                         <button className="google-button" onClick={() => searchGoogle(`${rec.name} by ${rec.artists.map((artist) => artist.name).join(", ")}`)}>Google</button>
                         <button className="youtube-button" onClick={() => searchYouTube(`${rec.name} by ${rec.artists.map((artist) => artist.name).join(", ")}`)}>YouTube</button>
