@@ -8,6 +8,9 @@ body {
 button:hover {
   cursor: pointer;
 }
+li:hover {
+  cursor: pointer;
+}
 .home-view-wrapper {
   background: linear-gradient(to bottom, #343434, #000000);
   height: 100%;
@@ -40,6 +43,7 @@ button:hover {
 .logout-button {
   background: #8151DB;
   color: white;
+  margin-left: 20px;
   padding: 7px 15px; /* Adjust the padding to make the space smaller */
   border: none;
   border-radius: 5px;

@@ -19,7 +19,7 @@
   border: 1px solid white;
   border-radius: 8px;
   padding: 7px 80px; /* Increased horizontal padding */
-  margin: 8px; /* Adjust the margin between buttons */
+  margin: 7px; /* Adjust the margin between buttons */
   font-size: 15px; /* Slightly smaller font size */
   transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -27,7 +27,7 @@
 
 .searchSongInfo:hover {
   background-color: rgba(255, 255, 255, 0.1);
-  transform: scale(1.02);
+  transform: scale(1.00) translateY(-2px);
 }
 
 .song-name {
@@ -41,4 +41,81 @@
 
 .titletext {
   color: white;
+}
+
+.song-recommendations{
+  color: white;
+  background: #161616;
+  border-radius: 8px;
+  padding: 7px 80px; /* Increased horizontal padding */
+  margin: 14px; /* Adjust the margin between buttons */
+  font-size: 15px; /* Slightly smaller font size */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.recommendations-list {
+  display:flex;
+  justify-content: space-between; /* Space the text and buttons evenly */
+  align-items: center; 
+  text-align: center;
+  color: white;
+  background: #161616;
+  border: .5px solid white;
+  border-radius: 8px;
+  padding: 7px 80px; /* Increased horizontal padding */
+  margin: 14px; /* Adjust the margin between buttons */
+  font-size: 15px; /* Slightly smaller font size */
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+  cursor: 'pointer'
+}
+
+.recommendations-list:hover {
+  background-color: rgba(255, 255, 255, 0.034);
+  transform: scale(1.00) translateY(-2px);
+}
+
+.back-button {
+  padding: 10px 20px;
+  background: #00000000;
+  margin: 20px 5px;
+  font-size: 15px;
+  border-radius: 8px;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.back-button:hover {
+  /*background-color: #8151DB;*/
+  background-color: rgba(255, 255, 255, 0.062);
+  transform: scale(1.00) translateY(-1px);
+}
+
+.google-button {
+  margin-left: 30px; /* Add space to the right of the Google button */
+  /* Add other styles as needed */
+}
+
+/* Styles for the YouTube button */
+.youtube-button {
+  margin-left: 0px; /* Add space to the right of the YouTube button */
+  /* Add other styles as needed */
+}
+
+.spotify-button{
+  margin-left: 0px;
+}
+
+.text-container {
+  flex: 1; /* Let it expand to take available space */
+  text-align: center; /* Center-align the text */
+}
+
+/* Styles for the button container */
+.button-container {
+  display: flex;
+  gap: 10px; /* Add space between the buttons */
 }
