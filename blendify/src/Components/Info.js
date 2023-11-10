@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./Info.css";
 
 export default function Info({ searchId, musicData }) {
@@ -7,8 +7,36 @@ export default function Info({ searchId, musicData }) {
   const baseUrl = "https://api.spotify.com/v1"
   const clientId = "7853b4c9dc604b2ea9b7f1cc305d1e86"
   const clientSecret = "cad3689f3ed5446596b7105deed6497f"
-
   const [currentBpm, setCurrentBpm] = useState(null); // Added bpm state
+
+
+ // Variable to keep track of the currently playing audio
+let currentAudio = null;
+
+const handleRecClick = (rec, event) => {
+  event.stopPropagation();
+
+  // Check if the clicked item is the same as the currently playing audio
+  if (currentAudio && currentAudio.src === rec.preview_url) {
+    // If the same song is clicked twice, stop the audio
+    currentAudio.pause();
+    currentAudio = null;
+  } else {
+    // Stop the currently playing audio, if any
+    if (currentAudio) {
+      currentAudio.pause();
+      currentAudio = null;
+    }
+
+    // Play the preview audio when clicked
+    if (rec.preview_url) {
+      const audio = new Audio(rec.preview_url);
+      audio.volume = 0.7;
+      currentAudio = audio; // Update the currently playing audio
+      audio.play();
+    }
+  }
+};
 
   function searchGoogle(query) {
     // Construct the Google search URL with the query
@@ -161,7 +189,7 @@ export default function Info({ searchId, musicData }) {
               <h3 className="song-recommendations">Song Recommendations for BPM: {Math.round(currentBpm)}</h3>
               <ul >
                 {songRecs.tracks.map((rec) => (
-                  <li className="recommendations-list" key={rec.id} onClick={(event) => handleSongClick(rec, event)}>
+                  <li className="recommendations-list" key={rec.id} onClick={(event) => handleRecClick(rec, event)}>
                     <div>
                       <img 
                           className="cover-art"
