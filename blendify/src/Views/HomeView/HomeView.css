@@ -3,6 +3,7 @@ header {
 }
 body {
   cursor: default;
+  background: black;
 }
 /* Change the cursor to pointer (hand) when hovering over buttons */
 button:hover {
@@ -34,9 +35,6 @@ li:hover {
 {
   width: 100%;
   height: 95px;
-}
-
-#info1 {
 }
 
 /* styles.css */
@@ -92,4 +90,11 @@ ul li a {
 ul li a:hover,
 ul li a.active {
     background: #727272;
+}
+
+.loading-symbol{
+  width: 20%; /* Set the width of the image */
+  height: 20%; /* Set the height of the image */
+  margin-top: 20px; /* Add margin to the top to create space between the image and the element above it */
+  padding-top: 20px;
 }

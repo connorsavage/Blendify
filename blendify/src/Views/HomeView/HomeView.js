@@ -56,12 +56,13 @@ export function HomeView({ onLogout, processSignIn }) {
           </button>
         </nav>
       </header>
-
+      <body>
+      </body>
       <Navbar show={showNav} />
       <div className="home-view">
         <div className="search-text">Find Your Blend</div>
         <SearchBar search={setSearchId} />
-        {loading && <p>loading...</p>}
+        {loading && <img classname="loading-symbol" src="https://i.pinimg.com/originals/49/23/29/492329d446c422b0483677d0318ab4fa.gif" alt="Loading..." />}
         {error ? (
           <span>Sorry there was an error</span>
         ) : (

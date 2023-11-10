@@ -8,6 +8,9 @@ export default function Info({ searchId, musicData }) {
   const clientId = "7853b4c9dc604b2ea9b7f1cc305d1e86"
   const clientSecret = "cad3689f3ed5446596b7105deed6497f"
 
+
+
+
   function searchGoogle(query) {
     // Construct the Google search URL with the query
     const searchURL = `https://www.google.com/search?q=${encodeURIComponent(query)}`;
@@ -135,7 +138,7 @@ export default function Info({ searchId, musicData }) {
           <button className="back-button" onClick={goBack}>Back</button>
           <div>
             <p classname="selected-song">
-              <span className="song-name">{selectedSong.name}</span> by{" "}
+              <span className="song-name">{selectedSong.name}</span> -{" "}
               <span className="artist-name">{selectedSong.artists.map((artist) => artist.name).join(", ")}</span>
             </p> 
           </div>
@@ -143,7 +146,7 @@ export default function Info({ searchId, musicData }) {
           {console.log("song recs", songRecs)}
           {songRecs && (
             <div>
-              <h3 className="song-recommendations">Song Recommendations for BPM: </h3>
+              <h3 className="song-recommendations">Song Recommendations for BPM: *xyz*</h3>
               <ul >
                 {songRecs.tracks.map((rec) => (
                   <li className="recommendations-list" key={rec.id} >

@@ -21,8 +21,9 @@
   padding: 7px 80px; /* Increased horizontal padding */
   margin: 7px; /* Adjust the margin between buttons */
   font-size: 15px; /* Slightly smaller font size */
-  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), background-color 0.3s;
+  box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, .5);
+
 }
 
 .searchSongInfo:hover {
@@ -43,6 +44,7 @@
   color: white;
 }
 
+
 .song-recommendations{
   color: white;
   background: #161616;
@@ -50,7 +52,7 @@
   padding: 7px 80px; /* Increased horizontal padding */
   margin: 14px; /* Adjust the margin between buttons */
   font-size: 15px; /* Slightly smaller font size */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, .5);
 }
 
 .recommendations-list {
@@ -65,8 +67,8 @@
   padding: 7px 80px; /* Increased horizontal padding */
   margin: 14px; /* Adjust the margin between buttons */
   font-size: 15px; /* Slightly smaller font size */
-  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+  transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), background-color 0.3s;
+  box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, .5);
   cursor: 'pointer'
 }
 
@@ -77,45 +79,90 @@
 
 .back-button {
   padding: 10px 20px;
-  background: #00000000;
-  margin: 20px 5px;
+  background: #0000005e;
+  margin: 15px 5px 5px;
   font-size: 15px;
   border-radius: 8px;
   color: #fff;
   border: none;
   cursor: pointer;
-  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), background-color 0.3s;
+  box-shadow: 0px 3px 10px 5px rgba(0, 0, 0, 0.1);
+
 }
 
 .back-button:hover {
   /*background-color: #8151DB;*/
-  background-color: rgba(255, 255, 255, 0.062);
+  background-color: #3a334b;;
   transform: scale(1.00) translateY(-1px);
 }
 
+/* Styles for the Google button */
 .google-button {
-  margin-left: 30px; /* Add space to the right of the Google button */
-  /* Add other styles as needed */
+  margin-left: 15px;
+  padding: 4px 15px; /* Adjust the padding to reduce the height */
+  background-color: #297fe2;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.1s ease-in-out, background-color 0.3s;
+  box-shadow: 0px 3px 3px 5px rgba(0, 0, 0, .2);
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+}
+
+.google-button:hover {
+  background-color: #2d67b0;
+  transform: translateY(-1px);
 }
 
 /* Styles for the YouTube button */
 .youtube-button {
-  margin-left: 0px; /* Add space to the right of the YouTube button */
-  /* Add other styles as needed */
+  margin-left: 10px;
+  padding: 4px 15px; /* Adjust the padding to reduce the height */
+  background-color: #ff0000;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.1s ease-in-out, background-color 0.3s;
+  box-shadow: 0px 3px 3px 5px rgba(0, 0, 0, .2);
+  font-weight: bold;
 }
 
-.spotify-button{
-  margin-left: 0px;
+.youtube-button:hover {
+  background-color: #cc0000;
+  transform: translateY(-1px);
+}
+
+/* Styles for the Spotify button */
+.spotify-button {
+  margin-left: 10px;
+  margin-right: -20px;
+  padding: 4px 15px; /* Adjust the padding to reduce the height */
+  background-color: #20da61;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.1s ease-in-out, background-color 0.3s;
+  box-shadow: 0px 3px 3px 5px rgba(0, 0, 0, .2);
+  color: black;
+  font-weight: bold;
+}
+
+.spotify-button:hover {
+  background-color: #168e3a;
+  transform: translateY(-1px);
 }
 
 .text-container {
-  flex: 1; /* Let it expand to take available space */
-  text-align: center; /* Center-align the text */
+  flex: 1;
+  text-align: center;
 }
 
-/* Styles for the button container */
 .button-container {
   display: flex;
-  gap: 10px; /* Add space between the buttons */
+  gap: 10px;
 }
