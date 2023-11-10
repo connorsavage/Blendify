@@ -8,8 +8,7 @@ export default function Info({ searchId, musicData }) {
   const clientId = "7853b4c9dc604b2ea9b7f1cc305d1e86"
   const clientSecret = "cad3689f3ed5446596b7105deed6497f"
 
-
-
+  const [currentBpm, setCurrentBpm] = useState(null); // Added bpm state
 
   function searchGoogle(query) {
     // Construct the Google search URL with the query
@@ -75,6 +74,7 @@ export default function Info({ searchId, musicData }) {
   const goBack = () => {
     setSelectedSong(null);
     setSongRecs(null);
+    setCurrentBpm(null);
   };
 
   useEffect(() => {
@@ -109,6 +109,7 @@ export default function Info({ searchId, musicData }) {
       throw new Error("Could not retrieve data");
     }
     const songRecsJson = await songRecs.json();
+    setCurrentBpm(bpm);
     return songRecsJson
   }
   
@@ -146,18 +147,19 @@ export default function Info({ searchId, musicData }) {
           {console.log("song recs", songRecs)}
           {songRecs && (
             <div>
-              <h3 className="song-recommendations">Song Recommendations for BPM: *xyz*</h3>
+              <h3 className="song-recommendations">Song Recommendations for BPM: {Math.round(currentBpm)}</h3>
               <ul >
                 {songRecs.tracks.map((rec) => (
                   <li className="recommendations-list" key={rec.id} >
                      <div className="text-container">
                         <span className="song-name">{rec.name}</span> by{" "}
-                        <span className="artist-name">*artist*</span>
+                        <span className="artist-name">{rec.artists.map((artist) => artist.name).join(", ")}</span>
+
                       </div>
                       <div className="button-container">
-                        <button className="google-button" onClick={() => searchGoogle(`${rec.name} by ${rec.artist}`)}>Google</button>
-                        <button className="youtube-button" onClick={() => searchYouTube(`${rec.name} by ${rec.artist}`)}>YouTube</button>
-                        <button className="spotify-button" onClick={() => searchSpotify(`${rec.name} by ${rec.artist}`)}>Spotify</button>
+                        <button className="google-button" onClick={() => searchGoogle(`${rec.name} by ${rec.artists.map((artist) => artist.name).join(", ")}`)}>Google</button>
+                        <button className="youtube-button" onClick={() => searchYouTube(`${rec.name} by ${rec.artists.map((artist) => artist.name).join(", ")}`)}>YouTube</button>
+                        <button className="spotify-button" onClick={() => searchSpotify(`${rec.name} by ${rec.artists.map((artist) => artist.name).join(", ")}`)}>Spotify</button>
                       </div>
                   </li>
                 ))}
