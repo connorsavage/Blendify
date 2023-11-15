@@ -1,0 +1,14 @@
+/* Add this CSS in your About page or a global stylesheet */
+.about-content {
+  color: white;
+}
+
+.about-content h2,
+.about-content p {
+  color: white;
+}
+
+header {
+  background-color: #242424; /* Add a background color for visibility across the full width */
+  height: 30px; /* Set the height of the header */
+}

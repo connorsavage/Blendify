@@ -1,0 +1,14 @@
+/* Add this CSS in your faq page or a global stylesheet */
+.faq-content {
+  color: white;
+}
+
+.faq-content h2,
+.faq-content p {
+  color: white;
+}
+
+header {
+  background-color: #242424; /* Add a background color for visibility across the full width */
+  height: 30px; /* Set the height of the header */
+}

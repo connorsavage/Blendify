@@ -1,5 +1,6 @@
 header {
   background-color: #242424; /* Add a background color for visibility across the full width */
+  height: 30px; /* Set the height of the header */
 }
 body {
   cursor: default;
@@ -41,7 +42,7 @@ li:hover {
 .logout-button {
   background: #8151DB;
   color: white;
-  margin-left: 20px;
+  margin-left: 25px;
   padding: 7px 15px; /* Adjust the padding to make the space smaller */
   border: none;
   border-radius: 5px;
@@ -55,46 +56,17 @@ li:hover {
   /* You can add additional hover effects here */
 }
 
-.sidenav {
-    width: 150px;
-    background: #242424;
-    position: absolute;
-    height: 95vh;
-    padding: 0 10px;
-    left: -100%;
-    transition: all 1s;
-}
-
-.sidenav.active {
-    left: 0;
-}
-
-ul {
-    padding: 0;
-}
-
-ul li {
-    list-style-type: none;
-    margin: 10px 0;
-}
-
-ul li a {
-    color: rgba(255, 255, 255, 1);
-    text-decoration: none;
-    font-size: 16px;
-    display: block;
-    padding: 10px 15px;
-    border-radius: 6px;
-}
-
-ul li a:hover,
-ul li a.active {
-    background: #727272;
-}
-
 .loading-symbol{
   width: 20%; /* Set the width of the image */
   height: 20%; /* Set the height of the image */
   margin-top: 20px; /* Add margin to the top to create space between the image and the element above it */
   padding-top: 20px;
+}
+
+.blendifylogo {
+  width: 50px; /* Adjust the width to your desired size */
+  height: auto; /* This maintains the aspect ratio */
+  margin-left: 70px;
+  position: relative;
+  top: -10px;
 }
