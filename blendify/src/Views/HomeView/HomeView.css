@@ -42,7 +42,7 @@ li:hover {
 .logout-button {
   background: #8151DB;
   color: white;
-  margin-left: 80px;
+  margin-left: 25px;
   padding: 7px 15px; /* Adjust the padding to make the space smaller */
   border: none;
   border-radius: 5px;
@@ -63,7 +63,10 @@ li:hover {
   padding-top: 20px;
 }
 
-.blendify-logo {
-    width: 40px; /* Adjust based on your logo's appearance */
-    height: 32px; /* Adjust based on your logo's appearance */
+.blendifylogo {
+  width: 50px; /* Adjust the width to your desired size */
+  height: auto; /* This maintains the aspect ratio */
+  margin-left: 70px;
+  position: relative;
+  top: -10px;
 }

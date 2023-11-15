@@ -44,15 +44,10 @@ export function HomeView({ onLogout, processSignIn }) {
     <div className="home-view-wrapper">
       <Sidebar/>
       <header>
+        <a href="/home" rel="noreferrer" className="blendify-logo">
+          <img className="blendifylogo" src={blendifyLogo} alt="Blendify Logo"></img>
+        </a>
         <nav>
-          {/* <button
-            onClick={() => {
-              navigate("/home")
-            }}
-              className="home-button"
-          >
-          <img src={blendifyLogo} alt="Blendify Logo" className="blendify-logo"/>
-          </button> */}
           <button
             onClick={() => {
               onLogout()
