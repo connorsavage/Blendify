@@ -6,6 +6,9 @@ import { HomeView } from "./Views/HomeView/HomeView"
 import { SignInView } from "./Views/SignInView/SignInView" // Corrected import here.
 import "./App.css"
 import ResultsPage from "./Views/Results/ResultsPage"
+import About from "./Views/SideBarPages/About"
+import Devs from "./Views/SideBarPages/Devs"
+import FAQ from "./Views/SideBarPages/FAQ"
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false)
@@ -47,6 +50,10 @@ function App() {
             }
           />
           <Route path="/search/:query" component={ResultsPage} />
+
+          <Route path="/about" element={<About />} />
+          <Route path="/team" element={<Devs />} />
+          <Route path="/faq" element={<FAQ />} />
         </Routes>
       </div>
     </Router>

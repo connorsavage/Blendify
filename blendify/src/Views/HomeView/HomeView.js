@@ -4,8 +4,8 @@ import { useNavigate } from "react-router-dom"
 import { getMusicInfo } from "../../Api.js"
 import Info from "../../Components/Info.js"
 import SearchBar from "../../Components/SearchBar/SearchBar"
-import Navbar from "../../Components/Navbar"
-import {GiHamburgerMenu} from 'react-icons/gi'
+import Sidebar from "../../Components/Sidebar"
+import blendifyLogo from "../../logo.png"
 
 export function HomeView({ onLogout, processSignIn }) {
   const [ showNav, setShowNav ] = useState(false)
@@ -42,9 +42,17 @@ export function HomeView({ onLogout, processSignIn }) {
 
   return (
     <div className="home-view-wrapper">
+      <Sidebar/>
       <header>
-        <GiHamburgerMenu onClick={() => setShowNav(!showNav)}/>
         <nav>
+          {/* <button
+            onClick={() => {
+              navigate("/home")
+            }}
+              className="home-button"
+          >
+          <img src={blendifyLogo} alt="Blendify Logo" className="blendify-logo"/>
+          </button> */}
           <button
             onClick={() => {
               onLogout()
@@ -56,9 +64,6 @@ export function HomeView({ onLogout, processSignIn }) {
           </button>
         </nav>
       </header>
-      <body>
-      </body>
-      <Navbar show={showNav} />
       <div className="home-view">
         <div className="search-text">Find Your Blend</div>
         <SearchBar search={setSearchId} />

@@ -1,0 +1,14 @@
+/* Add this CSS in your devs page or a global stylesheet */
+.devs-content {
+  color: white;
+}
+
+.devs-content h2,
+.devs-content p {
+  color: white;
+}
+
+header {
+  background-color: #242424; /* Add a background color for visibility across the full width */
+  height: 30px; /* Set the height of the header */
+}
