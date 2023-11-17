@@ -13,7 +13,8 @@
   font-size: 15px;
   border: none;
   margin-right: 10px;
-  width: 300px;
+  width: 450px;
+  height: 25px;
   border-top-left-radius: 25px; /* Rounded corner */
   border-bottom-left-radius: 25px; /* Rounded corner */
   outline: none; /* Remove focus border */
@@ -29,7 +30,7 @@
 }
 
 .search-bar button {
-  padding: 10px 20px;
+  padding: 14px 20px;
   font-size: 15px;
   background-color: #976ef8;
   color: #fff;
