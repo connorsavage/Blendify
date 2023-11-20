@@ -1,17 +1,50 @@
-/* Add this CSS in your devs page or a global stylesheet */
-.devs-content {
+.dev-content {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.dev-content h2,
+.dev-content p {
   color: white;
 }
 
-.devs-content h2 {
-  font-size: 40px; /* Adjust to desired size */
-  font-weight: 400;
-  color: rgba(255, 255, 255, 1); /* White with 80% opacity */
-  margin-bottom: 15px;
-  padding-top: 0%;
+header {
+  background-color: #242424;
+  height: 30px;
 }
 
-.devs-content p {
-  font-size: 20px; /* Adjust to desired size */
-  padding: 0 10%;
+.developer-profiles {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+  padding: 20px;
+  width: calc(100% - 40px);
+}
+
+.developer-profile {
+  background-color: rgba(51, 51, 51, 0.4);
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  color: white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); 
+}
+
+.developer-profile:hover {
+  /*transform: translateY(-10px);  Moves the profile up slightly */
+  transform: scale(1.05);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.9);
+}
+
+.developer-profile h3 {
+  margin-top: 0;
+  color: #976ef8;
+}
+
+.developer-profile p {
+  margin-top: 100px;
+  font-size: 0.9em;
 }
