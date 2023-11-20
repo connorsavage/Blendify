@@ -7,8 +7,17 @@ import "./Devs.css";
 const Devs = ({ onLogout }) => {
   const navigate = useNavigate();
 
+  const developers = [
+    { name: "Developer 1", role: "Role", description: "Brief description..." },
+    { name: "Developer 2", role: "Role", description: "Brief description..." },
+    { name: "Developer 3", role: "Role", description: "Brief description..." },
+    { name: "Developer 4", role: "Role", description: "Brief description..." },
+    { name: "Developer 5", role: "Role", description: "Brief description..." },
+    { name: "Developer 6", role: "Role", description: "Brief description..." },
+  ];
+
   return (
-    <div className="devs-wrapper">
+    <div className="dev-wrapper">
       <Sidebar />
       <header>
         <nav>
@@ -23,10 +32,17 @@ const Devs = ({ onLogout }) => {
           </button>
         </nav>
       </header>
-      <div className="devs-content">
-        <h2>Devs Page</h2>
-        {/* Add your content for the Devs page here */}
-        <p>This is the Devs page content.</p>
+      <div className="dev-content">
+        <h2>Meet Our Team</h2>
+        <div className="developer-profiles">
+          {developers.map((dev, index) => (
+            <div key={index} className="developer-profile">
+              <h3>{dev.name}</h3>
+              <p><strong>Role:</strong> {dev.role}</p>
+              <p>{dev.description}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
