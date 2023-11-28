@@ -8,12 +8,12 @@ const Devs = ({ onLogout }) => {
   const navigate = useNavigate();
 
   const developers = [
-    { name: "Developer 1", role: "Role", description: "Brief description..." },
-    { name: "Developer 2", role: "Role", description: "Brief description..." },
-    { name: "Developer 3", role: "Role", description: "Brief description..." },
-    { name: "Developer 4", role: "Role", description: "Brief description..." },
-    { name: "Developer 5", role: "Role", description: "Brief description..." },
-    { name: "Developer 6", role: "Role", description: "Brief description..." },
+    { name: "Mitchell Cootauco", role: "Role", description: "Brief description..." },
+    { name: "Sebastian Cruz", role: "Project Manager, Front-End Developer", description: "Big Dogs is my favorite T-shirt brand" },
+    { name: "Anna Garren", role: "Role", description: "Brief description..." },
+    { name: "Owen Hunger", role: "Role", description: "Brief description..." },
+    { name: "Erin Hurlburt", role: "Role", description: "Brief description..." },
+    { name: "Connor Savage", role: "Role", description: "Brief description..." },
   ];
 
   return (
