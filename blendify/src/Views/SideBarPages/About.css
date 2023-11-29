@@ -2,7 +2,14 @@
   color: white;
 }
 
-.about-content h2,
+.about-content h2 {
+  font-size: 40px; /* Adjust to desired size */
+  font-weight: 400;
+  color: rgba(255, 255, 255, 1); /* White with 80% opacity */
+  margin-bottom: 15px;
+  padding-top: 0%;
+}
+
 .about-content p {
   color: white;
 }

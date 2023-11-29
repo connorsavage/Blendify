@@ -47,6 +47,7 @@ export function HomeView({ onLogout, processSignIn }) {
         <a href="/home" rel="noreferrer" className="blendify-logo">
           <img className="blendifylogo" src={blendifyLogo} alt="Blendify Logo"></img>
         </a>
+        <a href="/home" rel="noreferrer" className="blendify-text"> Blendify </a>
         <nav>
           <button
             onClick={() => {
