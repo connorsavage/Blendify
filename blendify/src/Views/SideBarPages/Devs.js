@@ -8,12 +8,12 @@ const Devs = ({ onLogout }) => {
   const navigate = useNavigate();
 
   const developers = [
-    { name: "Mitchell Cootauco", role: "Role", description: "Brief description..." },
-    { name: "Sebastian Cruz", role: "Project Manager, Front-End Developer", description: "Big Dogs is my favorite T-shirt brand" },
-    { name: "Anna Garren", role: "Role", description: "Brief description..." },
-    { name: "Owen Hunger", role: "Role", description: "Brief description..." },
-    { name: "Erin Hurlburt", role: "Role", description: "Brief description..." },
-    { name: "Connor Savage", role: "Role", description: "Brief description..." },
+    { Name: "Mitchell Cootauco", Role: "Role", Fact: "Brief description..." },
+    { Name: "Sebastian Cruz", Role: "Project Manager, Front-End Developer", Fact: "Big Dogs is my favorite T-shirt brand" },
+    { Name: "Anna Garren", Role: "Role", Fact: "Brief description..." },
+    { Name: "Owen Hunger", Role: "Role", Fact: "Brief description..." },
+    { Name: "Erin Hurlburt", Role: "Role", Fact: "Brief description..." },
+    { Name: "Connor Savage", Role: "Front-End Developer", Fact: "i love code" },
   ];
 
   return (
@@ -43,9 +43,9 @@ const Devs = ({ onLogout }) => {
         <div className="developer-profiles">
           {developers.map((dev, index) => (
             <div key={index} className="developer-profile">
-              <h3>{dev.name}</h3>
-              <p><strong>Role:</strong> {dev.role}</p>
-              <p>{dev.description}</p>
+              <h3>{dev.Name}</h3>
+              <p><strong>Role:</strong> {dev.Role}</p>
+              <p>{dev.Fact}</p>
             </div>
           ))}
         </div>

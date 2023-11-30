@@ -16,8 +16,30 @@ const About = ({ onLogout }) => {
     own music library as well as suggest new songs, making the process of song selection quicker, easier, and more efficient for DJs of all levels. Blendify caters 
     towards amateur, intermediate, and professional DJs as they can expedite their music search mid-set, or prior to the set. Blendify is also for regularmusic 
     listeners looking to expand their library based on specific criteria.`, backgroundImage: "url-to-background-1.jpg" },
-    { title: "Milestone 2", description: "Our first major breakthrough...", backgroundImage: "url-to-background-2.jpg" },
-    { title: "Milestone 3", description: "Expanding our horizons...", backgroundImage: "url-to-background-3.jpg" },
+    { 
+      title: "Development Timeline - September",
+      description: [
+        " Sept 18: Obtained Spotify API access token; instructions added; login access created; PR pending",
+        " Sept 19: Sign-in page created; app view order organized; dynamic background styled",
+        " Sept 20: Initiated website design in Figma; flow chart and tab layout started",
+    ] , backgroundImage: "url-to-background-2.jpg" },
+    { 
+      title: "October",
+      description: [
+        " Oct 2: Logo design; search bar page transition fixed",
+        " Oct 3: Navigation to home page fixed; search bar populates with Spotify API results",
+        " Oct 16: Spotify API data displayed on front end",
+        " Oct 23: API search results fully displayed and styled",
+        " Oct 29: Search results converted into navigational buttons",
+    ] , backgroundImage: "url-to-background-3.jpg" },
+    { 
+      title: "November",
+      description: [
+        " Nov 1: Homepage sidebar with CSS created",
+        " Nov 7: HTTP request for song recommendations based on selected song implemented",
+        " Nov 14: Homepage sidebar redesigned; logo integrated; CSS tweaks",
+        " Nov 28: Logo turned into home button; sidebar CSS and JS formatted; menu styling updated",
+    ] , backgroundImage: "url-to-background-4.jpg" },
   ];
 
   return (
@@ -50,7 +72,15 @@ const About = ({ onLogout }) => {
             </div>
             <div className="parallax__layer parallax__layer--base">
               <h2>{milestone.title}</h2>
+              {Array.isArray(milestone.description) ? (
+          <ul>
+            {milestone.description.map((item, idx) => (
+              <li key={idx}>{item}</li>
+            ))}
+          </ul>
+        ) : (
               <p>{milestone.description}</p>
+        )}
             </div>
           </div>
         ))}

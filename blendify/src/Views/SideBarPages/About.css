@@ -59,7 +59,15 @@ header {
 .parallax__layer--base h2 {
   font-size: 2em;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 5%;
+}
+
+.parallax__layer--base ul li {
+  text-align: left;
+  font-size: 1.2em;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-bottom: 10%;
 }
 
 .parallax__layer--base p {
